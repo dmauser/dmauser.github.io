@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NetTIP: Extracting Digital Certificates from Network Captures in Easy Steps
+title: NetTIP - Extracting Digital Certificates from Network Captures in Easy Steps
 date: 2017-05-09 10:54
 author: dmauser@hotmail.com
 comments: true
