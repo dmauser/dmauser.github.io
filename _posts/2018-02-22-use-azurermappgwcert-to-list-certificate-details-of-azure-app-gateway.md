@@ -1,10 +1,5 @@
 ---
-layout: post
 title: Use AzureRMAppGWCert to list certificate details of Azure App Gateway
-date: 2018-02-22 09:46
-author: dmauser@hotmail.com
-comments: true
-categories: [ApplicationGateway, Azure, Certificates, PowerShell]
 ---
 Authors: <a href="https://www.linkedin.com/in/damauser/">Daniel Mauser</a> and <a href="https://www.linkedin.com/in/victor-santana-6482227/">Victor Santana</a>
 <h4><strong>Introduction</strong></h4>
