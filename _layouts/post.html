@@ -1,19 +1,14 @@
 ---
 layout: default
 ---
+<article id="post-page">
+{% include share.html %}
+	<h2>{{ page.title }}</h2>		
+	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}</time>
+	<div class="content">
 
-<article class="post">
-
-  {% include share.html %}
-
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
+		{{ content }}
+		
+	</div>
 </article>
+
