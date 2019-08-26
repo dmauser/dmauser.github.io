@@ -138,6 +138,12 @@ If something does not work for some reason during your configuration, you can do
 After you add this new Logging rule you have will see the following detailed IPSec events:
 
 <img src="https://msdnshared.blob.core.windows.net/media/2017/07/071217_0229_CreatingaIK24.png" alt="" />
+
+<h3><strong>Extra Tip: A Note about TCP MSS Clamp</strong></h3>
+Based on a reader feedback. It is necessary to setup TCP Clamp because Azure has a reduced MTU. See notes here: <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#ipsec>
+Thefore, ensure you have your Mikrotik also to change the MSS to 1350 as suggested by official documentation from Microsoft.
+ip firewall mangle add place-before=0 action=change-mss new-mss=1350 dst-address=10.4.0.0/16 chain=forward protocol=tcp tcp-flags=syn
+
 <h3><strong>Conclusion
 </strong></h3>
 In this article we demonstrated how to setup a IPSec Site-to-Site VPN using IKEv2 (Route-Based) between Azure and MikroTik RouterBoard. These instructions also may help you to setup any IPSec device which is compatible with Azure VPN Gateway settings. I hope you liked the information shared here and please let us know below in the comments if you have additional questions. I would like to make a special thanks to Azure Support Escalation Engineer Daniel Pires who co-author this article with me. Thanks!
