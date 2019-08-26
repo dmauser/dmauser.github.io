@@ -141,7 +141,9 @@ After you add this new Logging rule you have will see the following detailed IPS
 
 <h3><strong>Extra Tip: A Note about TCP MSS Clamp</strong></h3>
 Based on a reader feedback. It is necessary to setup TCP Clamp because Azure has a reduced MTU. See notes here: <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#ipsec>
+
 Thefore, ensure you have your Mikrotik also to change the MSS to 1350 as suggested by official documentation from Microsoft.
+
 ip firewall mangle add place-before=0 action=change-mss new-mss=1350 dst-address=10.4.0.0/16 chain=forward protocol=tcp tcp-flags=syn
 
 <h3><strong>Conclusion
